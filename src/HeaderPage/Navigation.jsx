@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import {
   Box,
   Button,
-  Container,
   Flex,
   HStack,
   IconButton,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Stack,
   Text,
   useColorModeValue,
@@ -23,9 +18,6 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false); // สถานะสำหรับเมนู hamburger
   const bgColor = useColorModeValue("white", "gray.800");
   const textColor = useColorModeValue("gray.600", "white");
-
-  // ใช้ useBreakpointValue เพื่อกำหนดการแสดงผลตามขนาดหน้าจอ
-  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -91,16 +83,39 @@ const Navigation = () => {
           p={4}
         >
           <Stack spacing={4}>
-            <Button variant="ghost" w="full" onClick={() => { navigate("/loanMoney"); setIsOpen(false); }}>
+            <Button
+              variant="ghost"
+              w="full"
+              onClick={() => {
+                navigate("/loanMoney");
+                setIsOpen(false);
+              }}
+            >
               ຄຳນວນເງິນກູ້
             </Button>
-            <Button variant="ghost" w="full" onClick={() => { navigate("/loanMoney"); setIsOpen(false); }}>
+            <Button
+              variant="ghost"
+              w="full"
+              onClick={() => {
+                navigate("/loanMoney");
+                setIsOpen(false);
+              }}
+            >
               ຄຳນວນຫຼຸດຕົ້ນຫຼຸດດອກເບ້ຍ
             </Button>
-            <Button variant="ghost" w="full" onClick={() => { navigate("/loanMoney"); setIsOpen(false); }}>
+            <Button
+              variant="ghost"
+              w="full"
+              onClick={() => {
+                navigate("/loanMoney");
+                setIsOpen(false);
+              }}
+            >
               ບັນທຶກລາຍຮັບ-ລາຍຈ່າຍ
             </Button>
-            <Button variant="ghost" w="full">About</Button>
+            <Button variant="ghost" w="full">
+              About
+            </Button>
           </Stack>
         </Box>
       )}

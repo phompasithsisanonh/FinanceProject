@@ -19,6 +19,7 @@ const Navigation = () => {
   const bgColor = useColorModeValue("white", "gray.800");
   const textColor = useColorModeValue("gray.600", "white");
 
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
